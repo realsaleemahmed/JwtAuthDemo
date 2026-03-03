@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JwtAuthDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8922d7f6633da7f7fa56aab0e6224a5ed7dc8c1f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+942ababdec007d6725e9b52f10402d3bea57e8ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("JwtAuthDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JwtAuthDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
