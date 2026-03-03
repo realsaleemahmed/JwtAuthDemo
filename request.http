@@ -1,0 +1,12 @@
+POST   http://localhost:5221/User/login
+Content-Type: application/json
+
+{
+  "userName": "testuser",
+  "Password": "testpassword"
+}
+
+###
+GET http://localhost:5221/User/secure-data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImp0aSI6ImQ4ODJjMWJkLTNhZDUtNDI5NC05ODkzLWE3MTA2MWFmMGE3OCIsImV4cCI6MTc3MjUyMjEwNywiaXNzIjoiSnd0RGVtb0FwaSIsImF1ZCI6Ikp3dERlbW9BcGkifQ.WH-zrxpf9qTtDSL4uu3JVD00GZ3sp7FvZgUHyruFFOk
+

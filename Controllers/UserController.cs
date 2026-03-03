@@ -1,41 +1,41 @@
-using Microsoft.AspNetCore.Mvc;
-using System.Text;
-using Microsoft.AspNetCore.Authorization;
+  using Microsoft.AspNetCore.Mvc;
+  using System.Text;
+  using Microsoft.AspNetCore.Authorization;
 
-[ApiController]
-[Route("[controller]")]
+  [ApiController]
+  [Route("[controller]")]
 
-public class UserController : ControllerBase
-{
-  private readonly TokenService _tokenService;
-
-  private static readonly List<User> _users = new List<User>
+  public class UserController : ControllerBase
   {
-    new User { UserName = "testuser", Password = "testpassword" }
-  };
+    private readonly TokenService _tokenService;
 
-  public UserController(TokenService tokenService)
-  {
-    _tokenService = tokenService;
-  }
-
-  [HttpPost("login")]
-  public IActionResult Login([FromBody] User user)
-  {
-    var existingUser = _users.SingleOrDefault(u => u.UserName == user.UserName && u.Password == user.Password);
-    if (existingUser == null)
+    private static readonly List<User> _users = new List<User>
     {
-      return Unauthorized("Invalid Username or Password");
+      new User { UserName = "testuser", Password = "testpassword" }
+    };
+
+    public UserController(TokenService tokenService)
+    {
+      _tokenService = tokenService;
     }
 
-    var token = _tokenService.GenerateToken(user.UserName);
-    return Ok(new { Token = token });
-  }
+    [HttpPost("login")]
+    public IActionResult Login([FromBody] User user)
+    {
+      var existingUser = _users.SingleOrDefault(u => u.UserName == user.UserName && u.Password == user.Password);
+      if (existingUser == null)
+      {
+        return Unauthorized("Invalid Username or Password");
+      }
 
-  [HttpGet("secure-data")]
-  [Authorize]
-  public IActionResult GetSecureData()
-  {
-    return Ok(new { Message = "This is a protected endpoint!" });
-  }
-};
+      var token = _tokenService.GenerateToken(user.UserName);
+      return Ok(new { Token = token });
+    }
+
+    [HttpGet("secure-data")]
+    [Authorize]
+    public IActionResult GetSecureData()
+    {
+      return Ok(new { Message = "This is a protected endpoint!" });
+    }
+  };
