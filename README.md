@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # **ASP.NET Core JWT Authentication Demo**
 
 A lightweight, straightforward Web API demonstrating how to implement JSON Web Tokens (JWT) in ASP.NET Core.
@@ -87,6 +86,5 @@ This is a working concept, but it's not production-ready out of the box. Before 
 **Author:** Saleem Ahmed
 
 *Backend Developer*
-=======
 
->>>>>>> 8ecaef9c24ace2c76e6beda766c17e07dc822db2
+
