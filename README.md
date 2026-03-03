@@ -16,6 +16,7 @@ Token generation, validation middleware, and [Authorize] attributes in action.
 
 Project Structure
 
+
 JwtDemo/
 ├── Controllers/
 │   └── UserController.cs
@@ -24,6 +25,7 @@ JwtDemo/
 ├── Program.cs
 ├── appsettings.json
 └── JwtDemo.csproj
+
 
 Quick Start
 
